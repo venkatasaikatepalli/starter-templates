@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <style>
+    body{
+      margin: 0px;
+    }
+    .header{
+      min-height: 60px;
+      max-height: 60px;
+      padding: 20px;
+    }
+    #custom-sidenav {
+      height: calc(100vh - 60px);
+      max-height: calc(100vh - 60px);
+      background-color:#1D2939;
+      padding: 15px;
+    }
+    #custom-sidenav .list-group-item {
+      margin-bottom: 5px;
+      border-radius: 3px;
+      background-color: transparent;
+      color: #ddd;
+      border: none;
+    }
+    #custom-sidenav .list-group-item:hover, #custom-sidenav .list-group-item.active {
+      margin-bottom: 5px;
+      border-radius: 3px;
+      background-color: red;
+      color: #ddd;
+      border: none;
+    }
+    #custom-sidenav .custom-sub-sidenav .list-group-item {
+      margin-bottom: 5px;
+      border-radius: 0px;
+      margin-left: 30px;
+      background-color: transparent;
+      color: #ddd;
+      border: none;
+    }
+    #custom-sidenav .custom-sub-sidenav .list-group-item.active, #custom-sidenav .custom-sub-sidenav .list-group-item:hover, #custom-sidenav .custom-sub-sidenav .list-group-item:focus, #custom-sidenav .custom-sub-sidenav .list-group-item:active {
+      color: red;
+      background-color: transparent;
+    }
+    #custom-sidenav .custom-sub-sidenav .list-group-item::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -3px;
+      margin-top: -.5px;
+      width: 5px;
+      height: 1px;
+      background-color: #fff;
+      opacity: .5;
+      transition: all 0.2s ease-in-out;
+    }
+    #custom-sidenav .custom-sub-sidenav .list-group-item.active::before, #custom-sidenav .custom-sub-sidenav .list-group-item:hover::before {
+      width: 20px;
+      left: -11px;
+      opacity: 1;
+      background-color: red;
+    }
+    .f-right {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    this is header
+  </div>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2" style="padding: 0px;height: calc(100vh - 60px);max-height: calc(100vh - 60px);">
+            <!-- menu -->
+            <div id="custom-sidenav">
+              <div class="list-group">
+                <a href="#" class="list-group-item">Item 1</a>
+                <a href="#" class="list-group-item">Item 2</a>
+                <a href="#demo4" class="list-group-item active" data-toggle="collapse">Item 4  <i class="f-right fa fa-chevron-down"></i></a>
+                <div class="collapse custom-sub-sidenav in" id="demo4">
+                  <a href="" class="list-group-item active">Subitem 1</a>
+                  <a href="" class="list-group-item">Subitem 2</a>
+                  <a href="" class="list-group-item">Subitem 3</a>
+                </div>
+                <a href="#" class="list-group-item">Item 1</a>
+                <a href="#" class="list-group-item">Item 2</a>
+                <a href="#" class="list-group-item">Item 1</a>
+                <a href="#" class="list-group-item">Item 2</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10" style="padding: 0px;height: calc(100vh - 60px);max-height: calc(100vh - 60px);overflow-y: auto;">
+            <div style="min-height:60vh;background-color:green;color: white;">fsfjsdkfkjsdjhf</div>
+            <br>
+            <div style="min-height:60vh;background-color:green;color: white;">fsfjsdkfkjsdjhf</div>
+            <br>
+            <div style="min-height:60vh;background-color:green;color: white;">fsfjsdkfkjsdjhf</div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
